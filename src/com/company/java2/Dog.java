@@ -1,4 +1,4 @@
-package com.company;
+package com.company.java2;
 
 public class Dog {
     private int age;
