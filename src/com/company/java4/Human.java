@@ -3,7 +3,7 @@ package com.company.java4;
 import java.util.Scanner;
 
 public class Human {
-    public static void Main(String args[]){
+    public static void main(String[] args){
         String hair_color;
         int number_of_teeth;
         String nails_color;
@@ -19,11 +19,11 @@ public class Human {
         System.out.println("Введите цвет ногтей: ");
         nails_color = scan.next();
         System.out.println("Есть ли кольца? true/false: ");
-        rings = scan.hasNextBoolean();
+        rings = scan.nextBoolean();
         System.out.println("Введите размер ноги: ");
         size = scan.nextInt();
         System.out.println("Ломали ли когда-нибудь кости на ногах? true/false: ");
-        broken = scan.hasNextBoolean();
+        broken = scan.nextBoolean();
 
         Hand hand = new Hand();
         Leg leg = new Leg();
@@ -40,6 +40,7 @@ public class Human {
         System.out.println(hand.getRings());
         System.out.println(leg.getSize());
         System.out.println(leg.isBroken());
-        sout
+        System.out.println(head.getHairColor());
+        System.out.println(head.getNumber_of_teeth());
     }
 }
