@@ -4,6 +4,10 @@ public class Head {
     String hair_color;
     int number_of_teeth;
 
+    Head(String hair_color, int number_of_teeth){
+        setNumber_of_teeth(number_of_teeth);
+        setHair_color(hair_color);
+    }
     public String getHairColor(){
         return hair_color;
     }
