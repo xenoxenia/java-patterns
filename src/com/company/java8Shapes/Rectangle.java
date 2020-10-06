@@ -14,22 +14,12 @@ public class Rectangle extends Figure {
 
     @Override
     public void painting(Graphics g) {
-        g.drawRect(getX1(), getY1(), getX2(), getY2());
+        g.setColor(getColor());
         g.fillRect(getX1(), getY1(), getX2(), getY2());
     }
 
     @Override
-    public void setColor() {
-        int r = (int)(Math.random() * 256);
-        int g = (int)(Math.random() * 256);
-        int b = (int)(Math.random() * 256);
-
-        Color color = new Color(r, g, b);
-    }
-
-    @Override
     public void go() {
-        setColor();
         painting(g);
     }
 }

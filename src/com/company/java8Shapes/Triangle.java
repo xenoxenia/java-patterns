@@ -50,22 +50,12 @@ public class Triangle extends Figure {
 
     @Override
     public void painting(Graphics g) {
-        g.drawPolygon(getX(), getY(), getN());
+        g.setColor(getColor());
         g.fillPolygon(getX(), getY(), getN());
     }
 
     @Override
-    public void setColor() {
-        int r = (int)(Math.random() * 256);
-        int g = (int)(Math.random() * 256);
-        int b = (int)(Math.random() * 256);
-
-        Color color = new Color(r, g, b);
-    }
-
-    @Override
     public void go() {
-        setColor();
         painting(g);
     }
 }

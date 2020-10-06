@@ -19,6 +19,6 @@ public class Main {
             System.out.println("Wanna buy anything else?");
         }
 
-        System.out.println("Sum of cart" + customer.cartSum());
+        System.out.println("Sum of cart " + customer.cartSum());
     }
 }
