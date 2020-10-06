@@ -5,6 +5,7 @@ import java.util.Random;
 
 public class Triangle extends Figure {
     Graphics g;
+    Graphics2D g2d = (Graphics2D)g;
     int x3, y3;
     Random random = new Random();
 
@@ -50,8 +51,8 @@ public class Triangle extends Figure {
 
     @Override
     public void painting(Graphics g) {
-        g.setColor(getColor());
-        g.fillPolygon(getX(), getY(), getN());
+        g2d.setColor(getColor());
+        g2d.fillPolygon(getX(), getY(), getN());
     }
 
     @Override

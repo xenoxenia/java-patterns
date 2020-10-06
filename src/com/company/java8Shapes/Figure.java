@@ -1,11 +1,15 @@
 package com.company.java8Shapes;
 
+import javax.swing.*;
+import java.applet.Applet;
 import java.awt.*;
 
 
 public abstract class Figure {
     int x1, y1, x2, y2;
     private Color color;
+    Graphics g;
+    Graphics2D g2d = (Graphics2D)g;
 
     Figure(int x1, int y1, int x2, int y2){
         setX1(x1);
