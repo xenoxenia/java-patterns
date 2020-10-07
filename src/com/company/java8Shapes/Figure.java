@@ -54,8 +54,7 @@ public abstract class Figure extends JFrame{
         int r = (int)(Math.random() * 256);
         int gr = (int)(Math.random() * 256);
         int b = (int)(Math.random() * 256);
-        Color c1 = new Color(r, gr, b);
-        return c1;
+        return new Color(r, gr, b);
     }
 
 }

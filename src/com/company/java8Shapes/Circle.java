@@ -1,6 +1,4 @@
 package com.company.java8Shapes;
-import java.awt.*;
-import java.util.Random;
 import java.awt.Graphics;
 
 public class Circle extends Figure {

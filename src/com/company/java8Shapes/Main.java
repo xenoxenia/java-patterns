@@ -9,9 +9,7 @@ public class Main extends JFrame {
         JFrame window = new JFrame("Окошечко");
         window.setSize(800, 800);
         window.setLayout(new BorderLayout(1, 1));
-        Together together = new Together();
-        together.together();
+        window.getContentPane().add(new Together());
         window.setVisible(true);
-        window.add(together).setVisible(true);
     }
 }

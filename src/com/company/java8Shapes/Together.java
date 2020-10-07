@@ -7,7 +7,7 @@ import java.util.Random;
 
 public class Together extends JComponent {
     Graphics g;
-    Graphics2D g2d = (Graphics2D)g;
+    Graphics2D g2d = (Graphics2D) g;
 
     public void together() {
         int f_case;
