@@ -1,19 +1,25 @@
 package com.company.java8Shapes;
 
 import java.awt.*;
+import java.util.Arrays;
 import java.util.Random;
 
 public class Triangle extends Figure {
-    Graphics g;
-    Graphics2D g2d = (Graphics2D)g;
     int x3, y3;
     Random random = new Random();
+    public int[] x;
+    public int[] y;
 
     Triangle(int x1, int y1, int x2, int y2, int x3, int y3) {
         super(x1, y1, x2, y2);
         setX3(x3);
         setY3(y3);
+        int[] x = {getX1(), getX2(), getX3()};
+        int[] y = {getY1(), getY2(), getY3()};
+        setX(x);
+        setY(y);
     }
+
 
     public void setX3(int x3) {
         this.x3 = x3;
@@ -31,32 +37,20 @@ public class Triangle extends Figure {
         return y3;
     }
 
-    int[] x = {x1, x2, x3};
-    int[] y = {y1, y2, y3};
-    int n = (int)(Math.random()*50);
+    int n = 3;
 
-
-    public int getN() {
-        return n;
+    public void setX(int[] x){
+        this.x = Arrays.copyOf(x, 3);
     }
 
-
-    public int[] getX() {
-        return x;
+    public void setY(int[] y){
+        this.y = Arrays.copyOf(y, 3);
     }
 
-    public int[] getY() {
-        return y;
+    //@Override
+    public void paint(Graphics g) {
+        getColor();
+        g.fillPolygon(x, y, n);
     }
 
-    @Override
-    public void painting(Graphics g) {
-        g2d.setColor(getColor());
-        g2d.fillPolygon(getX(), getY(), getN());
-    }
-
-    @Override
-    public void go() {
-        painting(g);
-    }
 }

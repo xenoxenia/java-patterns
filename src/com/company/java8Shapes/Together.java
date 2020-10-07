@@ -1,10 +1,13 @@
 package com.company.java8Shapes;
 
 import javax.swing.*;
+import java.awt.*;
 import java.util.Random;
 
 
 public class Together extends JComponent {
+    Graphics g;
+    Graphics2D g2d = (Graphics2D)g;
 
     public void together() {
         int f_case;
@@ -25,15 +28,15 @@ public class Together extends JComponent {
                 case (1):
                     y2 = x2;
                     Circle circle = new Circle(x1, y1, x2, y2);
-                    circle.go();
+                    circle.paint(g);
                     break;
                 case (0):
                     Rectangle rect = new Rectangle(x1, x2, y1, y1);
-                    rect.go();
+                    rect.paint(g);
                     break;
                 case (2):
                     Triangle triangle = new Triangle(x1, y1, x2, y2, x3, y3);
-                    triangle.go();
+                    triangle.paint(g);
                     break;
                 default:
                     break;

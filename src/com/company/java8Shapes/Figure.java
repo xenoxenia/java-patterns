@@ -3,13 +3,11 @@ package com.company.java8Shapes;
 import javax.swing.*;
 import java.applet.Applet;
 import java.awt.*;
+import java.applet.*;
 
 
-public abstract class Figure {
-    int x1, y1, x2, y2;
-    private Color color;
-    Graphics g;
-    Graphics2D g2d = (Graphics2D)g;
+public abstract class Figure extends JFrame{
+    protected int x1, y1, x2, y2;
 
     Figure(int x1, int y1, int x2, int y2){
         setX1(x1);
@@ -50,19 +48,14 @@ public abstract class Figure {
         this.y2 = y2;
     }
 
-    public abstract void painting(Graphics g);
+    public abstract void paint(Graphics g);
 
     public Color getColor(){
         int r = (int)(Math.random() * 256);
-        int g = (int)(Math.random() * 256);
+        int gr = (int)(Math.random() * 256);
         int b = (int)(Math.random() * 256);
-
-        return new Color(r, g, b);
+        Color c1 = new Color(r, gr, b);
+        return c1;
     }
 
-    public void setColor(Color color){
-        this.color = color;
-    }
-
-    public abstract void go();
 }
