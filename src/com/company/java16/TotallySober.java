@@ -110,7 +110,7 @@ class TotallySober extends JFrame {
             }
 
             public void mouseClicked(MouseEvent a) {
-                winner.setText(Drunkard(firstPlayer, secondPlayer));
+                winner.setText(TotallySober(firstPlayer, secondPlayer));
             }
 
             public void mouseEntered(MouseEvent a) {
@@ -124,7 +124,7 @@ class TotallySober extends JFrame {
         });
     }
 
-    public static String Drunkard(Stack<Integer> first, Stack<Integer> second) {
+    public static String TotallySober(Stack<Integer> first, Stack<Integer> second) {
         int count = 0;
 
         for (int i = 0; i < 106; i++) {

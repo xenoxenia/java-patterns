@@ -1,4 +1,4 @@
-package com.company.java2_6;
+package com.company.java2_6_factory;
 
 public class MCR implements Groups{
     @Override
